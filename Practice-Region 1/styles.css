@@ -1,0 +1,119 @@
+body,
+html {
+    background-color: hsla(100, 100%, 100%, 1);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.pageName {
+    display: inline-block;
+    color: rgba(0, 0, 0, 1);
+    font-size: 1.4em;
+    word-spacing: -0.15em;
+    font-weight: bolder;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+}
+
+.navBar {
+    height: 2em;
+    width: 100vw;
+    padding: 1em 2.5em 0.5em 1.5em;
+    background-color: hsla(0, 80%, 19%, 0.1);
+    border-radius: 0.5em;
+    white-space: nowrap;
+}
+
+.navBarItems {
+    float: right;
+    padding-right: 3em;
+}
+
+.itemContainer {
+    padding: 0.65em;
+}
+
+.searchIcon {
+    padding-right: 1.3em;
+    color: hsla(28, 100%, 50%, 0.842);
+}
+
+.searchIcon svg {
+    transform: translateY(28%);
+}
+
+.searchIcon:hover {
+    color: grey;
+}
+.searchIcon:hover::before {
+    content: "Search";
+    color: rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    transform: translate(70%, -100%);
+    padding-bottom: 0.2em;
+}
+
+.navBar a {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    font-weight: bolder;
+    text-decoration: none;
+    color: rgba(0, 0, 0);
+}
+
+.navBar a:hover {
+    color: darkslategray;
+}
+
+i {
+    color: red;
+    text-decoration: underline;
+}
+.invisible {
+    visibility: hidden;
+}
+.appearedText {
+    display: inline-block;
+    transform: translateX(-12%);
+}
+.adjustedText {
+    display: inline-block; 
+    transform: translateX(248%);
+}
+.adjustedText:hover {
+    color: blue;
+}
+
+/* Animation Section */
+.mainContainer {
+    margin-top: 2rem;
+    margin-bottom: -1rem;
+    display: grid;
+    text-align: center;
+}
+
+.helloMessage {
+    margin-bottom: 0;
+}
+.rulerForHello {
+    width: 5rem;
+}
+
+.secondContainer {
+    display: grid;
+    place-items: center;
+}
+
+#animatedContainer {
+    width: 15vw;
+    height: 30vh;
+    background-color: hsla(0, 80%, 19%, 0.1);
+    border: 0.3rem solid rgb(0, 0, 0);
+    border-radius: 0.2rem;
+    display: grid;
+    align-content: center;
+    text-align: justify;
+    padding: 2rem;
+}
+/* use keyframe for the triggered animation */
