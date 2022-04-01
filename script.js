@@ -28,7 +28,7 @@ elementTexted.prepend(...nodes);
 
 // Fetching tag elements as an array && then enumerating the first item
 tagIElements = document.getElementsByTagName("i");
-hiddenElement = tagIElements[0]; 
+hiddenElement = tagIElements[0];
 
 onlySpanElement = document.getElementsByClassName("hiddenSpan");
 hiddenSpanElement = onlySpanElement[0];
@@ -59,4 +59,17 @@ function changeText() {
     hiddenElement.classList.add("invisible");
     hiddenSpanElement.classList.add("invisible");
     elementTexted.classList.add("appearedText");
+}
+
+// W3Schools pre-defined JavaScript Functons
+function w3_open() {
+    document.getElementById("main").style.marginLeft = "25%";
+    document.getElementById("mySidebar").style.width = "25%";
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("openNav").style.display = "none";
+}
+function w3_close() {
+    document.getElementById("main").style.marginLeft = "0%";
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("openNav").style.display = "inline-block";
 }
