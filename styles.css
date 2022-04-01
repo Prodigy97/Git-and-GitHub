@@ -3,6 +3,13 @@ html {
     background-color: hsla(100, 100%, 100%, 1);
     margin: 0;
     padding: 0;
+}
+
+*,
+::before,
+::before,
+div {
+    box-sizing: border-box;
     overflow: hidden;
 }
 
@@ -17,7 +24,7 @@ html {
 }
 
 .navBar {
-    height: 2em;
+    height: 4em;
     width: 100vw;
     padding: 1em 2.5em 0.5em 1.5em;
     background-color: hsla(0, 80%, 19%, 0.1);
@@ -41,6 +48,9 @@ html {
 
 .searchIcon svg {
     transform: translateY(28%);
+}
+.svgForInfinity {
+    transform: translateY(30%);
 }
 
 .searchIcon:hover {
@@ -66,9 +76,36 @@ html {
     color: darkslategray;
 }
 
+h4 i:hover {
+    cursor: pointer;
+}
+
 i {
     color: red;
     text-decoration: underline;
+    display: inline-block;
+    transform: translateX(70%);
+}
+
+/* Styling For Button */
+button {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 0.9rem;
+    color: red;
+    visibility: hidden;
+    display: inline-block;
+    transform: translateX(50%);
+}
+
+button:hover {
+    color: hsla(28, 82%, 60%, 0.842);
+    cursor: pointer;
+}
+
+.visible {
+    visibility: visible;
 }
 .invisible {
     visibility: hidden;
@@ -77,12 +114,11 @@ i {
     display: inline-block;
     transform: translateX(-12%);
 }
-.adjustedText {
-    display: inline-block; 
-    transform: translateX(248%);
-}
-.adjustedText:hover {
-    color: blue;
+
+/* Translate the span text in the h4 to align properly with other elements*/
+h4 span {
+    display: inline-block;
+    transform: translateX(25%);
 }
 
 /* Animation Section */
@@ -105,8 +141,8 @@ i {
     place-items: center;
 }
 
-#animatedContainer {
-    width: 15vw;
+.animatedContainer {
+    width: 20vw;
     height: 30vh;
     background-color: hsla(0, 80%, 19%, 0.1);
     border: 0.3rem solid rgb(0, 0, 0);
@@ -116,4 +152,58 @@ i {
     text-align: justify;
     padding: 2rem;
 }
+
+/* Alignment for the "yeah see it down below" span  */
+.alignText {
+    display: inline-block;
+    transform: translateX(-17%);
+}
+
 /* use keyframe for the triggered animation */
+.animate {
+    animation-name: containerAnimation;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-delay: 300ms;
+    animation-direction: forwards;
+    animation-play-state: running;
+}
+
+@keyframes containerAnimation {
+    0% {
+        height: 35vh;
+    }
+
+    20% {
+        height: 40vh;
+        width: 22vw;
+    }
+
+    40% {
+        background-color: rgb(255, 255, 0);
+        height: 40vh;
+        width: 24vw;
+    }
+
+    60% {
+        height: 45vh;
+        width: 26vw;
+        background-color: rgb(90, 17, 158);
+    }
+
+    80% {
+        height: 52vh;
+        width: 28vw;
+    }
+
+    100% {
+        height: 62vh;
+        width: 30vw;
+        background-color: rgb(255, 99, 71);
+    }
+}
+
+/* This class is attched to stop animation */
+.stopAnimation {
+    animation-play-state: unset;
+}

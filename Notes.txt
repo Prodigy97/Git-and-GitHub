@@ -1,0 +1,14 @@
+JavaScript Event Listener to count numbers of click on Elements:
+
+      let countOfButtonToReload = 0;
+      Listening for the number of clicks on the tackled button && strictly execute a block of instructions
+      buttonToReload.addEventListener("click", function () {
+      countOfButtonToReload++;
+
+      if (countOfButtonToReload <= 1) {
+            animatedDiv.classList.add("stopAnimation");
+            console.dir(buttonToReload);
+
+            console.table("Button Is Active!");
+      }
+      });
